@@ -151,7 +151,7 @@ namespace KoAR.SaveEditor.Views.Main
             Application application = (Application)sender;
             application.Activated -= this.Application_Activated;
             application.MainWindow.Closing += this.MainWindow_Closing;
-            try
+            /*try
             {
                 using CancellationTokenSource source = new CancellationTokenSource();
                 source.CancelAfter(2500);
@@ -175,7 +175,7 @@ namespace KoAR.SaveEditor.Views.Main
             if (Debugger.IsAttached || this.UpdateNotifier.Update == null || !application.Dispatcher.Invoke(this.OpenUpdateWindow))
             {
                 await application.Dispatcher.InvokeAsync(this.OpenFile);
-            }
+            }*/
         }
 
         private bool CancelDueToUnsavedChanges(string proceedText, string saveProceedText, string cancelDescription)
